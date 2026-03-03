@@ -1,0 +1,324 @@
+/* style.css */
+
+/* Базовые сбросы и переменные */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Плавный скролл */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Контейнер для ограничения ширины контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Типографика */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease; /* Плавный эффект для ховера */
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn--primary {
+    background-color: #6c5ce7; /* Основной фиолетовый */
+    color: white;
+    box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2);
+}
+
+.btn--primary:hover {
+    background-color: #5b4bc4; /* Темнее при наведении */
+    transform: translateY(-2px); /* Эффект поднятия */
+    box-shadow: 0 8px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* --- Шапка (Header) --- */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Легкое размытие */
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header__container {
+    display: flex; /* Используем Flexbox */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+/* Навигация */
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Расстояние между пунктами меню */
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: #6c5ce7;
+}
+
+/* --- Главный экран (Hero) --- */
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f9f9ff 0%, #f0f0ff 100%);
+}
+
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две равные колонки */
+    align-items: center;
+    gap: 50px;
+}
+
+.hero__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero__image {
+    width: 100%;
+    height: 400px;
+    background-color: #e0d9ff; /* Заглушка под фото */
+    border-radius: 20px;
+    background-image: url('https://placehold.co/600x400/6c5ce7/white?text=Ваше+Фото'); /* Заглушка */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 30px -10px rgba(108, 92, 231, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero__image:hover {
+    transform: scale(1.02);
+}
+
+/* --- Секция услуг (карточки) --- */
+.services {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.services__grid {
+    display: grid; /* Используем Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Карточка */
+.service-card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(108, 92, 231, 0.1);
+    border-color: #6c5ce7;
+}
+
+.service-card__icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.service-card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.service-card__text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Подвал (Footer) --- */
+.footer {
+    background-color: #222;
+    color: #ddd;
+    padding-top: 60px;
+}
+
+.footer__container {
+    display: grid; /* Используем Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer__subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer__list {
+    list-style: none;
+}
+
+.footer__item {
+    margin-bottom: 10px;
+}
+
+.footer__item a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__item a:hover {
+    color: #6c5ce7;
+}
+
+.footer__list--inline {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__copyright {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- Адаптивность (Медиазапросы) --- */
+
+/* Для планшетов и небольших ноутбуков */
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    .hero__container {
+        gap: 30px;
+    }
+}
+
+/* Для мобильных телефонов */
+@media (max-width: 768px) {
+    /* Шапка */
+    .header__container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav__list {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Герой */
+    .hero__container {
+        grid-template-columns: 1fr; /* Одна колонка */
+        text-align: center;
+    }
+    .hero__subtitle {
+        max-width: 100%;
+    }
+    .hero__image {
+        height: 300px;
+        order: -1; /* Картинка сверху на мобилках */
+    }
+
+    /* Секции */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Подвал */
+    .footer__container {
+        text-align: center;
+    }
+    .footer__list--inline {
+        justify-content: center;
+    }
+}
+
+/* Для совсем маленьких телефонов */
+@media (max-width: 480px) {
+    .nav__list {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    .btn {
+        padding: 12px 24px;
+    }
+}
